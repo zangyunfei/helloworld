@@ -1,7 +1,7 @@
 package com.zyf;
 
 /**
- * @author zangyunfei
+ * @author zangyunfei by eclipse
  */
 public class HelloWorld {
 	public static void main(String[] args) {
