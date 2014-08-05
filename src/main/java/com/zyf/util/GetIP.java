@@ -1,4 +1,4 @@
-package com.zyf;
+package com.zyf.util;
 
 import java.net.Inet6Address;
 import java.net.InetAddress;

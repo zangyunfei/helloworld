@@ -1,4 +1,4 @@
-package com.zyf;
+package com.zyf.util;
 
 public class SimpleThreads {
 

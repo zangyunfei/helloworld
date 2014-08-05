@@ -1,4 +1,4 @@
-package com.zyf;
+package com.zyf.util;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;

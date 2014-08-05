@@ -1,4 +1,4 @@
-package com.zyf;
+package com.zyf.util;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -12,10 +12,10 @@ public class Sort {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("merchantbizid", "" + System.currentTimeMillis());
 		map.put("tradetype", "1");
-		map.put("tradeexplan", "µæ×Ê");
+		map.put("tradeexplan", "ï¿½ï¿½ï¿½ï¿½");
 		map.put("todepositacct", "6226200103289030");
-		map.put("todepositacctname", "ê°ÔÆ·É");
-		map.put("tosubbankname", "ÃñÉúÒøÐÐ");
+		map.put("todepositacctname", "ï¿½ï¿½Æ·ï¿½");
+		map.put("tosubbankname", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		map.put("bankno", "MSYH");
 		map.put("applymoney", "0.01");
 		map.put("paychannel", "b2e_chinapay");
@@ -49,11 +49,11 @@ public class Sort {
 	}
 
 	/**
-	 * È¡µÃbeanÖÐ,»ù´¡Êý¾ÝÀàÐÍ
+	 * È¡ï¿½ï¿½beanï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param bean
 	 * @param filterStr
-	 *            ²»ÐèÒª½øÐÐ²Ù×÷µÄ×Ö·û´®
+	 *            ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
 	 * @return
 	 */
 	public static String getSortForJson(String json, String filterStr) {
@@ -61,11 +61,11 @@ public class Sort {
 	}
 
 	/**
-	 * È¡µÃbeanÖÐ,»ù´¡Êý¾ÝÀàÐÍ
+	 * È¡ï¿½ï¿½beanï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param bean
 	 * @param filterStr
-	 *            ²»ÐèÒª½øÐÐ²Ù×÷µÄ×Ö·û´®
+	 *            ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
 	 * @return
 	 */
 	public static String getSortString(Object bean, String filterStr) {
@@ -76,7 +76,7 @@ public class Sort {
 	}
 
 	/**
-	 * È¡µÃ¶ÔÏóÖÐ»ù´¡Êý¾ÝÀàÐÍ£¬·µ»Ømap
+	 * È¡ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½map
 	 * 
 	 * @param bean
 	 * @return
@@ -97,7 +97,7 @@ public class Sort {
 	}
 
 	/**
-	 * ¸ù¾ÝÊôÐÔÃû»ñÈ¡ÊôÐÔÖµ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Öµ
 	 * */
 	private static Object getFieldValueByName(String fieldName, Object o) {
 		try {

@@ -1,4 +1,4 @@
-package com.zyf;
+package com.zyf.util;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -33,27 +33,27 @@ import org.apache.http.util.EntityUtils;
  * @see 
  *      ==========================================================================
  *      ===========================
- * @see ÔÚ¿ª·¢HTTPSÓ¦ÓÃÊ±£¬Ê±³£»áÓöµ½Á½ÖÖÇé¿ö
- * @see 1¡¢ÒªÃ´²âÊÔ·şÎñÆ÷Ã»ÓĞÓĞĞ§µÄSSLÖ¤Êé,¿Í»§¶ËÁ¬½ÓÊ±¾Í»áÅ×Òì³£
+ * @see ï¿½Ú¿ï¿½ï¿½ï¿½HTTPSÓ¦ï¿½ï¿½Ê±ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * @see 1ï¿½ï¿½ÒªÃ´ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½SSLÖ¤ï¿½ï¿½,ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Í»ï¿½ï¿½ï¿½ï¿½ì³£
  * @see javax.net.ssl.SSLPeerUnverifiedException: peer not authenticated
- * @see 2¡¢ÒªÃ´²âÊÔ·şÎñÆ÷ÓĞSSLÖ¤Êé,µ«¿ÉÄÜÓÉÓÚ¸÷ÖÖ²»ÖªÃûµÄÔ­Òò,Ëü»¹ÊÇ»áÅ×Ò»¸ö¶ÑÀÃÂëÆßÔãµÄÒì³£
+ * @see 2ï¿½ï¿½ÒªÃ´ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½SSLÖ¤ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½Ö²ï¿½Öªï¿½ï¿½ï¿½Ô­ï¿½ï¿½,ï¿½ï¿½ï¿½Ç»ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£
  * @see 
  *      ==========================================================================
  *      ===========================
- * @see ÓÉÓÚÎÒÃÇÕâÀïÊ¹ÓÃµÄÊÇHttpComponents-Client-4.1.2´´½¨µÄÁ¬½Ó£¬ËùÒÔ£¬ÎÒÃÇ¾ÍÒª¸æËßËüÊ¹ÓÃÒ»¸ö²»Í¬µÄTrustManager
- * @see TrustManagerÊÇÒ»¸öÓÃÓÚ¼ì²é¸ø¶¨µÄÖ¤ÊéÊÇ·ñÓĞĞ§µÄÀà
- * @see SSLÊ¹ÓÃµÄÄ£Ê½ÊÇX.509....¶ÔÓÚ¸ÃÄ£Ê½,JavaÓĞÒ»¸öÌØ¶¨µÄTrustManager,³ÆÎªX509TrustManager
- * @see ËùÒÔÎÒÃÇ×Ô¼º´´½¨Ò»¸öX509TrustManagerÊµÀı
- * @see ¶øÔÚX509TrustManagerÊµÀıÖĞ
- *      £¬ÈôÖ¤ÊéÎŞĞ§£¬ÄÇÃ´TrustManagerÔÚËüµÄcheckXXX()·½·¨ÖĞ½«Å×³öCertificateException
- * @see ¼ÈÈ»ÎÒÃÇÒª½ÓÊÜËùÓĞµÄÖ¤Êé,ÄÇÃ´X509TrustManagerÀïÃæµÄ·½·¨ÌåÖĞ²»Å×³öÒì³£¾ÍĞĞÁË
- * @see È»ºó´´½¨Ò»¸öSSLContext²¢Ê¹ÓÃX509TrustManagerÊµÀıÀ´³õÊ¼»¯Ö®
- * @see ½Ó×ÅÍ¨¹ıSSLContext´´½¨SSLSocketFactory£¬×îºó½«SSLSocketFactory×¢²á¸øHttpClient¾Í¿ÉÒÔÁË
+ * @see ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½HttpComponents-Client-4.1.2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½TrustManager
+ * @see TrustManagerï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½
+ * @see SSLÊ¹ï¿½Ãµï¿½Ä£Ê½ï¿½ï¿½X.509....ï¿½ï¿½ï¿½Ú¸ï¿½Ä£Ê½,Javaï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½TrustManager,ï¿½ï¿½ÎªX509TrustManager
+ * @see ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½X509TrustManagerÊµï¿½ï¿½
+ * @see ï¿½ï¿½ï¿½ï¿½X509TrustManagerÊµï¿½ï¿½ï¿½ï¿½
+ *      ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½Ã´TrustManagerï¿½ï¿½ï¿½ï¿½ï¿½checkXXX()ï¿½ï¿½ï¿½ï¿½ï¿½Ğ½ï¿½ï¿½×³ï¿½CertificateException
+ * @see ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ö¤ï¿½ï¿½,ï¿½ï¿½Ã´X509TrustManagerï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ²ï¿½ï¿½×³ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * @see È»ï¿½ó´´½ï¿½Ò»ï¿½ï¿½SSLContextï¿½ï¿½Ê¹ï¿½ï¿½X509TrustManagerÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ö®
+ * @see ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½SSLContextï¿½ï¿½ï¿½ï¿½SSLSocketFactoryï¿½ï¿½ï¿½ï¿½ï¿½SSLSocketFactory×¢ï¿½ï¿½ï¿½HttpClientï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½
  * @see 
  *      ==========================================================================
  *      ===========================
  * @create Jul 30, 2012 1:11:52 PM
- * @author ĞşÓñ(http://blog.csdn/net/jadyer)
+ * @author ï¿½ï¿½ï¿½ï¿½(http://blog.csdn/net/jadyer)
  */
 public class TTT3 {
 	public static void main(String[] args) throws Exception {
@@ -68,21 +68,21 @@ public class TTT3 {
 	}
 
 	/**
-	 * ÏòHTTPSµØÖ··¢ËÍPOSTÇëÇó
+	 * ï¿½ï¿½HTTPSï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½POSTï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param reqURL
-	 *            ÇëÇóµØÖ·
+	 *            ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
 	 * @param params
-	 *            ÇëÇó²ÎÊı
-	 * @return ÏìÓ¦ÄÚÈİ
+	 *            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @return ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 	 */
 	@SuppressWarnings("finally")
 	public static String sendSSLPostRequest(String reqURL,
 			Map<String, String> params) {
-		long responseLength = 0; // ÏìÓ¦³¤¶È
-		String responseContent = null; // ÏìÓ¦ÄÚÈİ
-		HttpClient httpClient = new DefaultHttpClient(); // ´´½¨Ä¬ÈÏµÄhttpClientÊµÀı
-		X509TrustManager xtm = new X509TrustManager() { // ´´½¨TrustManager
+		long responseLength = 0; // ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+		String responseContent = null; // ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+		HttpClient httpClient = new DefaultHttpClient(); // ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½Ïµï¿½httpClientÊµï¿½ï¿½
+		X509TrustManager xtm = new X509TrustManager() { // ï¿½ï¿½ï¿½ï¿½TrustManager
 			public void checkClientTrusted(X509Certificate[] chain,
 					String authType) throws CertificateException {
 			}
@@ -96,39 +96,39 @@ public class TTT3 {
 			}
 		};
 		try {
-			// TLS1.0ÓëSSL3.0»ù±¾ÉÏÃ»ÓĞÌ«´óµÄ²î±ğ£¬¿É´ÖÂÔÀí½âÎªTLSÊÇSSLµÄ¼Ì³ĞÕß£¬µ«ËüÃÇÊ¹ÓÃµÄÊÇÏàÍ¬µÄSSLContext
+			// TLS1.0ï¿½ï¿½SSL3.0ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ì«ï¿½ï¿½Ä²ï¿½ğ£¬¿É´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªTLSï¿½ï¿½SSLï¿½Ä¼Ì³ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½SSLContext
 			SSLContext ctx = SSLContext.getInstance("TLS");
 
-			// Ê¹ÓÃTrustManagerÀ´³õÊ¼»¯¸ÃÉÏÏÂÎÄ£¬TrustManagerÖ»ÊÇ±»SSLµÄSocketËùÊ¹ÓÃ
+			// Ê¹ï¿½ï¿½TrustManagerï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½TrustManagerÖ»ï¿½Ç±ï¿½SSLï¿½ï¿½Socketï¿½ï¿½Ê¹ï¿½ï¿½
 			ctx.init(null, new TrustManager[] { xtm }, null);
 
-			// ´´½¨SSLSocketFactory
+			// ï¿½ï¿½ï¿½ï¿½SSLSocketFactory
 			SSLSocketFactory socketFactory = new SSLSocketFactory(ctx);
 
-			// Í¨¹ıSchemeRegistry½«SSLSocketFactory×¢²áµ½ÎÒÃÇµÄHttpClientÉÏ
+			// Í¨ï¿½ï¿½SchemeRegistryï¿½ï¿½SSLSocketFactory×¢ï¿½áµ½ï¿½ï¿½ï¿½Çµï¿½HttpClientï¿½ï¿½
 			httpClient.getConnectionManager().getSchemeRegistry()
 					.register(new Scheme("https", 443, socketFactory));
 
-			HttpPost httpPost = new HttpPost(reqURL); // ´´½¨HttpPost
-			List<NameValuePair> formParams = new ArrayList<NameValuePair>(); // ¹¹½¨POSTÇëÇóµÄ±íµ¥²ÎÊı
+			HttpPost httpPost = new HttpPost(reqURL); // ï¿½ï¿½ï¿½ï¿½HttpPost
+			List<NameValuePair> formParams = new ArrayList<NameValuePair>(); // ï¿½ï¿½ï¿½ï¿½POSTï¿½ï¿½ï¿½ï¿½Ä±?ï¿½ï¿½ï¿½ï¿½
 			for (Map.Entry<String, String> entry : params.entrySet()) {
 				formParams.add(new BasicNameValuePair(entry.getKey(), entry
 						.getValue()));
 			}
 			httpPost.setEntity(new UrlEncodedFormEntity(formParams, "UTF-8"));
 
-			HttpResponse response = httpClient.execute(httpPost); // Ö´ĞĞPOSTÇëÇó
-			HttpEntity entity = response.getEntity(); // »ñÈ¡ÏìÓ¦ÊµÌå
+			HttpResponse response = httpClient.execute(httpPost); // Ö´ï¿½ï¿½POSTï¿½ï¿½ï¿½ï¿½
+			HttpEntity entity = response.getEntity(); // ï¿½ï¿½È¡ï¿½ï¿½Ó¦Êµï¿½ï¿½
 
 			if (null != entity) {
 				responseLength = entity.getContentLength();
 				responseContent = EntityUtils.toString(entity, "UTF-8");
 				EntityUtils.consume(entity); // Consume response content
 			}
-			System.out.println("ÇëÇóµØÖ·: " + httpPost.getURI());
-			System.out.println("ÏìÓ¦×´Ì¬: " + response.getStatusLine());
-			System.out.println("ÏìÓ¦³¤¶È: " + responseLength);
-			System.out.println("ÏìÓ¦ÄÚÈİ: " + responseContent);
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ö·: " + httpPost.getURI());
+			System.out.println("ï¿½ï¿½Ó¦×´Ì¬: " + response.getStatusLine());
+			System.out.println("ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½: " + responseLength);
+			System.out.println("ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½: " + responseContent);
 		} catch (KeyManagementException e) {
 			e.printStackTrace();
 		} catch (NoSuchAlgorithmException e) {
@@ -142,7 +142,7 @@ public class TTT3 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			httpClient.getConnectionManager().shutdown(); // ¹Ø±ÕÁ¬½Ó,ÊÍ·Å×ÊÔ´
+			httpClient.getConnectionManager().shutdown(); // ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Í·ï¿½ï¿½ï¿½Ô´
 			return responseContent;
 		}
 	}

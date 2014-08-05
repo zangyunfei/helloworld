@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.zyf;
+package com.zyf.util;
 
 import java.util.Date;
 

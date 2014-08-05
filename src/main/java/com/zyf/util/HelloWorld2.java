@@ -1,4 +1,4 @@
-package com.zyf;
+package com.zyf.util;
 
 import java.net.SocketException;
 import java.net.UnknownHostException;
@@ -10,11 +10,8 @@ import java.net.UnknownHostException;
 public class HelloWorld2 {
 	public static void main(String[] args) throws SocketException,
 			UnknownHostException {
-		if (isWindowsOS()) {
-			System.out.println(GetIP.getWindowIp());
-		} else {
-			System.out.println(GetIP.getLinuxIP());
-		}
+		String a = 1 > 2 ? "1111" : 2 < 1 ? "1234" : "1415";
+
 	}
 
 	/*

@@ -1,4 +1,4 @@
-package com.zyf;
+package com.zyf.util;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Refect {
 	/**
-	 * ¸ù¾İÊôĞÔÃû»ñÈ¡ÊôĞÔÖµ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Öµ
 	 * */
 	private Object getFieldValueByName(String fieldName, Object o) {
 		try {
@@ -23,7 +23,7 @@ public class Refect {
 	}
 
 	/**
-	 * »ñÈ¡ÊôĞÔÃûÊı×é
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * */
 	private String[] getFiledName(Object o) {
 		Field[] fields = o.getClass().getDeclaredFields();
@@ -36,7 +36,7 @@ public class Refect {
 	}
 
 	/**
-	 * »ñÈ¡ÊôĞÔÀàĞÍ(type)£¬ÊôĞÔÃû(name)£¬ÊôĞÔÖµ(value)µÄmap×é³ÉµÄlist
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(type)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(name)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ(value)ï¿½ï¿½mapï¿½ï¿½Éµï¿½list
 	 * */
 	public Map getFiledsInfo(Object o) {
 		Field[] fields = o.getClass().getDeclaredFields();
@@ -68,7 +68,7 @@ public class Refect {
 	}
 
 	/**
-	 * »ñÈ¡¶ÔÏóµÄËùÓĞÊôĞÔÖµ£¬·µ»ØÒ»¸ö¶ÔÏóÊı×é
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * */
 	public Object[] getFiledValues(Object o) {
 		String[] fieldNames = this.getFiledName(o);
