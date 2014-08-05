@@ -1,0 +1,16 @@
+package com.zyf.util;
+
+public class Splide {
+	public static void main(String[] args) {
+		String resMes = "000|808080211300666|20140723|201407230000044|20140723|828550|中国工商银行|11347|张燕|1500000|150|||代发|6|20140723|540E5DBFF78CD732C7C9F257E91E7EB65341C91D158608284D0FBB538111CE1CE249F75D9856DDA27F15223B90AF12A516E3FD3718D0C3FDD03BA5EE2F216974C8DC4C8993BCDAFD3B0925B5DEBB907A7FC6E51D9213B60E88379C2E5181FE08C530876FE39E92D38C511C81D3E7DC6ADCCB22C7A8423F3CA0EF5810407DB7CD";
+		String[] str = resMes.split("\\|");
+		String resCode = str[0];
+		// 成功
+		if (resCode.equals("000")) {
+			String state = str[14];
+			String plainData = str[13];
+			System.out.println(state);
+			System.out.println(plainData);
+		}
+	}
+}
